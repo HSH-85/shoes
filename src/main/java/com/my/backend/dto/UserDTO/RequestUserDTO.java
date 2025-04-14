@@ -2,7 +2,10 @@ package com.my.backend.dto.UserDTO;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.my.backend.entity.User;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @Builder
@@ -38,8 +41,6 @@ public class RequestUserDTO {
         return User.builder()
                 .email(this.email)
                 .password(this.password)
-                .address(this.address)
-                .addressDetail(this.addressDetail)
                 .build();
     }
 

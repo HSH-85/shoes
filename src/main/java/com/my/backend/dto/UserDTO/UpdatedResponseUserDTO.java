@@ -23,8 +23,6 @@ public class UpdatedResponseUserDTO {
     public User toEntity() {
         return User.builder()
                 .email(this.email)
-                .address(this.address)
-                .addressDetail(this.addressDetail)
                 .build();
     }
 
@@ -32,8 +30,6 @@ public class UpdatedResponseUserDTO {
         return UpdatedResponseUserDTO.builder()
                 .id(user.getId())
                 .email(user.getEmail())
-                .address(user.getAddress())
-                .addressDetail(user.getAddressDetail())
                 .build();
     }
 }
